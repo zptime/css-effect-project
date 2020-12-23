@@ -73,4 +73,110 @@ body {
           flex: 1;
   background-color: #3c9;
 }
+
+.two-column-layout {
+  width: 400px;
+  height: 400px;
+}
+
+.two-column-layout .left {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+
+.two-column-layout .right {
+  margin-left: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+
+.two-column-layout-overflow {
+  width: 400px;
+  height: 400px;
+}
+
+.two-column-layout-overflow .left {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+
+.two-column-layout-overflow .right {
+  overflow: hidden;
+  height: 100%;
+  background-color: #66f;
+}
+
+.two-column-layout-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+
+.two-column-layout-flex .left {
+  width: 100px;
+  background-color: #f66;
+}
+
+.two-column-layout-flex .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #66f;
+}
+
+.three-column-layout {
+  width: 400px;
+  height: 400px;
+}
+
+.three-column-layout .left {
+  float: left;
+  width: 50px;
+  height: 100%;
+  background-color: #f66;
+}
+
+.three-column-layout .center {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+
+.three-column-layout .right {
+  overflow: hidden;
+  height: 100%;
+  background-color: #3c9;
+}
+
+.three-column-layout-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+
+.three-column-layout-flex .left {
+  width: 50px;
+  background-color: #f66;
+}
+
+.three-column-layout-flex .center {
+  width: 100px;
+  background-color: #66f;
+}
+
+.three-column-layout-flex .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #3c9;
+}
 /*# sourceMappingURL=index.css.map */

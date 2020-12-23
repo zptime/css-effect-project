@@ -12,7 +12,7 @@ body {
   }
 }
 
-// 全屏布局
+// 全屏布局之position布局
 .fullscreen-layout {
   position: relative;
   width: 400px;
@@ -56,6 +56,97 @@ body {
     background-color: #66f;
   }
   main {
+    flex: 1;
+    background-color: #3c9;
+  }
+}
+
+// 两列布局之float/margin
+.two-column-layout {
+  width: 400px;
+  height: 400px;
+  .left {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .right {
+    margin-left: 100px;
+    height: 100%;
+    background-color: #66f;
+  }
+}
+
+// 两列布局之overflow/float
+.two-column-layout-overflow {
+  width: 400px;
+  height: 400px;
+  .left {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .right {
+    overflow: hidden;
+    height: 100%;
+    background-color: #66f;
+  }
+}
+
+// 两列布局之flex
+.two-column-layout-flex {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  .left {
+    width: 100px;
+    background-color: #f66;
+  }
+  .right {
+    flex: 1;
+    background-color: #66f;
+  }
+}
+
+// 三列布局
+.three-column-layout {
+  width: 400px;
+  height: 400px;
+  .left {
+    float: left;
+    width: 50px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .center {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #66f;
+  }
+  .right {
+    overflow: hidden;
+    height: 100%;
+    background-color: #3c9;
+  }
+}
+
+// 三列布局之flex
+.three-column-layout-flex {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  .left {
+    width: 50px;
+    background-color: #f66;
+  }
+  .center {
+    width: 100px;
+    background-color: #66f;
+  }
+  .right {
     flex: 1;
     background-color: #3c9;
   }

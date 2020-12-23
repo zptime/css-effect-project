@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
 
-  <body class="flex-ct-x">
+  <body class="flex-ct-x" style="flex-wrap: wrap; overflow-y: auto">
     <div class="demo">
       <div class="demo-title">
         全屏布局：由顶部、底部和主体三部分组成，其特点为三部分左右满屏拉伸、顶部底部高度固定和主体高度自适应
+        <br />
+        position布局实现（absolute + left/right/top/bottom）
       </div>
       <div class="demo-block">
         <div class="fullscreen-layout">
@@ -37,6 +39,68 @@
             <div style="overflow: hidden; height: 100%"></div>
           </main>
           <footer></footer>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-title">
+        两列布局：一列宽度固定、另一列宽度自适应和两列高度固定且相等
+        <br />
+        float布局实现（float + margin-left/right）
+      </div>
+      <div class="demo-block">
+        <div class="two-column-layout">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-title">
+        两列布局之float/overflow实现：overflow:hidden使其形成BFC区域与外界隔离
+      </div>
+      <div class="demo-block">
+        <div class="two-column-layout-overflow">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-title">两列布局之flex布局</div>
+      <div class="demo-block">
+        <div class="two-column-layout-flex">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-title">
+        三列布局：由左中右三列组成，其特点为连续两列宽度固定、剩余一列宽度自适应和三列高度固定且相等。
+        <br />
+        overflow + float实现
+      </div>
+      <div class="demo-block">
+        <div class="three-column-layout">
+          <div class="left"></div>
+          <div class="center"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <div class="demo-title">三列布局之flex布局</div>
+      <div class="demo-block">
+        <div class="three-column-layout-flex">
+          <div class="left"></div>
+          <div class="center"></div>
+          <div class="right"></div>
         </div>
       </div>
     </div>
