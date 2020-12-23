@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   overflow: hidden;
   height: 100vh;
@@ -46,13 +47,8 @@ body {
 }
 
 .fullscreen-layout-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 400px;
   height: 400px;
 }
@@ -68,9 +64,7 @@ body {
 }
 
 .fullscreen-layout-flex main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   background-color: #3c9;
 }
 
@@ -111,8 +105,6 @@ body {
 }
 
 .two-column-layout-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 400px;
   height: 400px;
@@ -124,9 +116,29 @@ body {
 }
 
 .two-column-layout-flex .right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
+  background-color: #66f;
+}
+
+.two-column-layout-calc {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.two-column-layout-calc .left {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  background-color: #f66;
+}
+
+.two-column-layout-calc .right {
+  height: 100%;
+  width: calc(100% - 100px);
+  margin-left: 100px;
   background-color: #66f;
 }
 
@@ -156,8 +168,6 @@ body {
 }
 
 .three-column-layout-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 400px;
   height: 400px;
@@ -174,9 +184,186 @@ body {
 }
 
 .three-column-layout-flex .right {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   background-color: #3c9;
+}
+
+.grail-layout-x {
+  padding: 0 100px;
+  width: 400px;
+  height: 400px;
+}
+
+.grail-layout-x .left {
+  float: left;
+  margin-left: -100px;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+
+.grail-layout-x .right {
+  float: right;
+  margin-right: -100px;
+  width: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+
+.grail-layout-x .center {
+  height: 100%;
+  background-color: #3c9;
+}
+
+.grail-layout-y {
+  width: 400px;
+  height: 400px;
+}
+
+.grail-layout-y .left {
+  float: left;
+  width: 100px;
+  height: 100%;
+  background-color: #f66;
+}
+
+.grail-layout-y .right {
+  float: right;
+  width: 100px;
+  height: 100%;
+  background-color: #66f;
+}
+
+.grail-layout-y .center {
+  margin: 0 100px;
+  height: 100%;
+  background-color: #3c9;
+}
+
+.grail-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+
+.grail-layout .left {
+  width: 100px;
+  background-color: #f66;
+}
+
+.grail-layout .center {
+  flex: 1;
+  background-color: #3c9;
+}
+
+.grail-layout .right {
+  width: 100px;
+  background-color: #66f;
+}
+
+.one {
+  background-color: #f66;
+}
+
+.two {
+  background-color: #66f;
+}
+
+.three {
+  background-color: #f90;
+}
+
+.four {
+  background-color: #09f;
+}
+
+.average-layout {
+  width: 400px;
+  height: 400px;
+}
+
+.average-layout div {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+.average-layout-flex {
+  display: flex;
+  width: 400px;
+  height: 400px;
+}
+
+.average-layout-flex div {
+  flex: 1;
+}
+
+.center-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  background-color: #f66;
+}
+
+.center-layout div {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background-color: #66f;
+}
+
+.sticky-footer-layout {
+  width: 400px;
+  height: 400px;
+}
+
+.sticky-footer-layout .wrapper {
+  height: auto;
+  width: 100%;
+  min-height: 100%;
+}
+
+.sticky-footer-layout .content {
+  padding-bottom: 150px;
+  /* 必须使用和footer相同的高度 */
+  background-color: #f66;
+}
+
+.sticky-footer-layout .footer {
+  position: relative;
+  margin-top: -150px;
+  /* footer高度的负值 */
+  height: 150px;
+  clear: both;
+  background-color: #66f;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.sticky-footer-layout-flex {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  height: 400px;
+}
+
+.sticky-footer-layout-flex .content {
+  flex: 1;
+  background-color: #f66;
+}
+
+.sticky-footer-layout-flex .footer {
+  flex: 0;
+  background-color: #66f;
 }
 /*# sourceMappingURL=index.css.map */

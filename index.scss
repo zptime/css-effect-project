@@ -110,6 +110,27 @@ body {
   }
 }
 
+// 两列布局之calc
+.two-column-layout-calc {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  .left {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    background-color: #f66;
+  }
+  .right {
+    height: 100%;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    background-color: #66f;
+  }
+}
+
 // 三列布局
 .three-column-layout {
   width: 400px;
@@ -149,5 +170,170 @@ body {
   .right {
     flex: 1;
     background-color: #3c9;
+  }
+}
+
+// 圣杯布局float + margin-left/right + padding-left/right
+.grail-layout-x {
+  padding: 0 100px;
+  width: 400px;
+  height: 400px;
+  .left {
+    float: left;
+    margin-left: -100px;
+    width: 100px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .right {
+    float: right;
+    margin-right: -100px;
+    width: 100px;
+    height: 100%;
+    background-color: #66f;
+  }
+  .center {
+    height: 100%;
+    background-color: #3c9;
+  }
+}
+
+// 双飞翼布局float + margin-left/right
+.grail-layout-y {
+  width: 400px;
+  height: 400px;
+  .left {
+    float: left;
+    width: 100px;
+    height: 100%;
+    background-color: #f66;
+  }
+  .right {
+    float: right;
+    width: 100px;
+    height: 100%;
+    background-color: #66f;
+  }
+  .center {
+    margin: 0 100px;
+    height: 100%;
+    background-color: #3c9;
+  }
+}
+
+// 圣杯布局/双飞翼布局flex
+.grail-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  .left {
+    width: 100px;
+    background-color: #f66;
+  }
+  .center {
+    flex: 1;
+    background-color: #3c9;
+  }
+  .right {
+    width: 100px;
+    background-color: #66f;
+  }
+}
+
+// 均分布局
+.one {
+  background-color: #f66;
+}
+.two {
+  background-color: #66f;
+}
+.three {
+  background-color: #f90;
+}
+.four {
+  background-color: #09f;
+}
+
+// 均匀布局之float + width
+.average-layout {
+  width: 400px;
+  height: 400px;
+  div {
+    float: left;
+    width: 25%;
+    // width:calc(100% / n)
+    height: 100%;
+  }
+}
+
+// 均匀布局之flex
+.average-layout-flex {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  div {
+    flex: 1;
+  }
+}
+
+// 居中布局
+.center-layout {
+  display: flex;
+  width: 400px;
+  height: 400px;
+  background-color: #f66;
+  div {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background-color: #66f;
+  }
+}
+
+// sticky footer布局
+.sticky-footer-layout {
+  width: 400px;
+  height: 400px;
+  .wrapper {
+    height: auto;
+    width: 100%;
+    min-height: 100%;
+  }
+  .content {
+    padding-bottom: 150px; /* 必须使用和footer相同的高度 */
+    background-color: #f66;
+  }
+  .footer {
+    position: relative;
+    margin-top: -150px; /* footer高度的负值 */
+    height: 150px;
+    clear: both;
+    background-color: #66f;
+  }
+}
+
+.clearfix {
+  display: inline-block;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.sticky-footer-layout-flex {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  height: 400px;
+  .content {
+    flex: 1;
+    background-color: #f66;
+  }
+  .footer {
+    flex: 0;
+    background-color: #66f;
   }
 }
