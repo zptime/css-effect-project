@@ -1,0 +1,76 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.demo {
+  width: 400px;
+  margin: 20px;
+}
+
+.demo-title {
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.fullscreen-layout {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.fullscreen-layout header,
+.fullscreen-layout footer,
+.fullscreen-layout main {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.fullscreen-layout header {
+  top: 0;
+  height: 50px;
+  background-color: #f66;
+}
+
+.fullscreen-layout footer {
+  bottom: 0;
+  height: 50px;
+  background-color: #66f;
+}
+
+.fullscreen-layout main {
+  top: 50px;
+  bottom: 50px;
+  background-color: #3c9;
+}
+
+.fullscreen-layout-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+  height: 400px;
+}
+
+.fullscreen-layout-flex header {
+  height: 50px;
+  background-color: #f66;
+}
+
+.fullscreen-layout-flex footer {
+  height: 50px;
+  background-color: #66f;
+}
+
+.fullscreen-layout-flex main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #3c9;
+}
+/*# sourceMappingURL=index.css.map */
